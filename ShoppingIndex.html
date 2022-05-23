@@ -1,0 +1,106 @@
+<!doctype html>
+
+<head>
+    <title>Buying Cars just became fun!</title>
+    <link rel="shortcut icon" href="Images/Logo.jfif">
+    <link rel="stylesheet" href="L3Stuff.css">
+    <link href="http://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
+    <style>
+        
+    </style>
+    
+
+</head>
+
+<script>
+     var items = [
+        ['Images/CarNumber1.jpg', 65999, 'HelaZula 5000 Series'],
+        ['Images/CarNumber2.jpg', 37999, 'Bititzu Hybrid'],
+        ['Images/CarNumber3.jpg', 55999, 'Butintale Deluxe'],
+        ['Images/CarNumber4.png', 22999, 'Mitzanubushi'],
+        ['Images/CarNumber5.jfif', 61999, 'Pogorsh 911'],
+        ['Images/CarNumber6.jfif', 89999, 'Totota Hylix'],
+    ];
+
+ var cartItems = [];
+
+ function run() {
+     var main = document.getElementById('products');
+
+     // elements needing to be added
+     for (var i = 0; i < items.length; i++) {
+
+
+
+
+         var ele = document.createElement('li');
+         var pic = document.createElement('img');
+         var price = document.createElement('h1');
+         var desc = document.createElement('h2');
+         var add = document.createElement('button');
+         var typeBox = document.createElement('input');
+
+
+
+         // Push elements into html
+         main.appendChild(ele);
+         ele.appendChild(pic);
+         ele.appendChild(price);
+         ele.appendChild(desc);
+         ele.appendChild(add);
+         ele.appendChild(typeBox);
+
+         //edit pusher elements info from array
+
+         pic.src = items[i][0];
+         price.innerHTML = '$' + items[i][1];
+         desc.innerHTML = items[i][2];
+         add.innerHTML = 'Add to Cart';
+         typeBox.type = 'number';
+
+         typeBox.setAttribute("id", "input" + i);
+         typeBox.value = 1;
+
+         add.dataset.cartIndex = i;
+         add.addEventListener('click', adding, false);
+     }
+
+     function adding(event) {
+         const NUM = event.currentTarget.dataset.cartIndex;
+
+         cartItems.push([items[NUM]]);
+         cartItems[cartItems.length - 1][1] = Number(document.getElementById('input' + NUM).value);
+
+         updateCart();
+     }
+
+     var totalItems = 0;
+
+     function updateCart() {
+         var itemCounter = document.getElementById('itemCount');
+
+         totalItems = 0;
+         for (var i = 0; i < cartItems.length; i++) {
+             totalItems += cartItems[i][1];
+
+         }
+
+         itemCounter.innerHTML = totalItems;
+     }
+ }
+</script>
+
+<body onload="run()">
+    <nav>
+        <a href="HomeIndex.html">Exit</a>
+    
+    </nav>
+    <h1>Cart Items:</h1>
+    
+    <h2 id='itemCount'>None</h2>
+
+    <ul id="products">
+
+    </ul>
+
+</body>

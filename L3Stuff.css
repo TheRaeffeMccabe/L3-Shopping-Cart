@@ -1,0 +1,95 @@
+html {
+
+
+    background-image: url(Images/BackgroundWaves.jpg);
+    
+    background-repeat: repeat;
+    background-attachment: fixed;
+    /*    This is to place a background that is fixed */
+
+
+}
+body {
+
+    font-family: 'Courier New', monospace;
+    font-size: 25px;
+    color: azure;
+    margin-left: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.head-grid img {
+    width: 8vw;
+    height: 8vh;
+    background-color: royalblue;
+    border-radius: 30px;
+    padding: 2%;
+    margin: 3px 3px;
+}
+
+a:hover {
+    background-color: rgb(125, 198, 211);
+  }
+
+
+nav a {
+    background-color: royalblue;
+    border-radius: 20px;
+    padding: 1%;
+    margin: 10px 10px;
+    border-color: black;
+    color: white;
+}
+
+ul {
+    width: 500px;
+}
+
+li img{
+    width: 92vw;
+    align-self: center;
+}
+
+h1 {
+    background-color: royalblue;
+    border-radius: 20px;
+    padding: 2%;
+    margin: 10px 10px;
+    display: block;
+    
+}
+
+h2 {
+    background-color: royalblue;
+    border-radius: 20px;
+    padding: 2%;
+    margin: 10px 10px;
+    
+}
+
+h3 {
+    background-color: royalblue;
+    border-radius: 20px;
+    padding: 2%;
+    margin: 20px 20px;
+    font-size: 100px;
+}
+img {
+    width: 100vw;
+    height: 100vh;
+    border-color: dimgrey;
+    border-bottom-width: inherit;
+    border-bottom-style: inherit;
+    align-self: center;
+    
+}
+
+
+
+script {
+    font-family: 'Agency FB Bold', inherit;
+    font-size: 25px;
+    color: azure;
+
+}
