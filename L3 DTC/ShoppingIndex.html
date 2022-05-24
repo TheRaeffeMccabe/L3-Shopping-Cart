@@ -2,7 +2,7 @@
 
 <head>
     <title>Buying Cars just became fun!</title>
-    <link rel="shortcut icon" href="Images/CarNumber1.jpg">
+    <link rel="shortcut icon" href="Images/Logo.png">
     <link rel="stylesheet" href="L3Stuff.css">
     <link href="http://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
     <style>
@@ -13,13 +13,14 @@
 </head>
 
 <script>
+    /*   All my items in a array */
      var items = [
         ['Images/CarNumber1.jpg', 65999, 'HelaZula 5000 Series'],
         ['Images/CarNumber2.jpg', 37999, 'Bititzu Hybrid'],
         ['Images/CarNumber3.jpg', 55999, 'Butintale Deluxe'],
-        ['Images/CarNumber4.png', 22999, 'Mitzanubushi'],
-        ['Images/CarNumber5.jfif', 61999, 'Pogorsh 911'],
-        ['Images/CarNumber6.jfif', 89999, 'Totota Hylix'],
+        ['Images/CarNumber4.jpg', 22999, 'Mitzanubushi'],
+        ['Images/CarNumber5.jpg', 61999, 'Pogorsh 911'],
+        ['Images/CarNumber6.jpg', 89999, 'Totota Hylix'],
     ];
 
  var cartItems = [];
@@ -75,7 +76,7 @@
      }
 
      var totalItems = 0;
-
+     /*   Update total amount of values */
      function updateCart() {
          var itemCounter = document.getElementById('itemCount');
 
@@ -92,10 +93,10 @@
 
 <body onload="run()">
     <nav>
-        <a href="L3Index.html">Exit</a>
+        <a href="HomeIndex.html">Exit</a>
     
     </nav>
-    <h1>Cart Items:</h1>
+    <h1 >Cart Items:</h1>
     
     <h2 id='itemCount'>None</h2>
 

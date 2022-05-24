@@ -1,51 +1,50 @@
 html {
-
-
     background-image: url(Images/BackgroundWaves.jpg);
-    
     background-repeat: repeat;
     background-attachment: fixed;
     /*    This is to place a background that is fixed */
-
-
 }
 body {
-
+    /*    Main Body Values */
     font-family: 'Courier New', monospace;
-    font-size: 25px;
+    font-size: 2vw;
     color: azure;
     margin-left: 20px;
     grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 1fr 3fr 1fr 2fr 1fr;
 }
-
+/*    First Image */
 .head-grid img {
     width: 8vw;
-    height: 8vh;
+    height: 15vh;
     background-color: royalblue;
     border-radius: 30px;
     padding: 2%;
     margin: 3px 3px;
 }
+/*    Hover colour over text */
+a:hover {
+    background-color: rgb(125, 198, 211);
+  }
 
+/*    All my contacts */
 nav a {
     background-color: royalblue;
     border-radius: 20px;
-    padding: 2%;
+    padding: 1%;
     margin: 10px 10px;
     border-color: black;
     color: white;
 }
-
 ul {
     width: 500px;
 }
-
+/*  image Values */
 li img{
     width: 92vw;
     align-self: center;
 }
-
+/*   Heading values */
 h1 {
     background-color: royalblue;
     border-radius: 20px;
@@ -54,7 +53,7 @@ h1 {
     display: block;
     
 }
-
+/*   Heading values */
 h2 {
     background-color: royalblue;
     border-radius: 20px;
@@ -62,14 +61,15 @@ h2 {
     margin: 10px 10px;
     
 }
-
+/*   Heading values */
 h3 {
     background-color: royalblue;
     border-radius: 20px;
     padding: 2%;
     margin: 20px 20px;
-    font-size: 100px;
+    font-size: 5vw;
 }
+/*   Image values like Size and colour */
 img {
     width: 100vw;
     height: 100vh;
@@ -81,10 +81,34 @@ img {
 }
 
 
-
+/*   Font for script letters */
 script {
     font-family: 'Agency FB Bold', inherit;
     font-size: 25px;
     color: azure;
 
+}
+
+/*   Iframe values */
+.Map {
+    display: block;
+    width: 90%;
+    height: 30vh;
+    align-self: inherit;
+    margin: 1vw;
+}
+/*   Iframe values */
+.Video {
+    display: block;
+    width: 90%;
+    height: 30vh;
+    align-self: center;
+    margin: 1vw;
+}
+
+/*   Zoom Container values */
+.img-zoom-container img{
+    width: 40%;
+    height: 50vh;
+    align-self: center;
 }
