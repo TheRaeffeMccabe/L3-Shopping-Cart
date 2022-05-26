@@ -11,7 +11,7 @@
     
 
 </head>
-
+ 
 <script>
     /*   All my items in a array */
      var items = [
@@ -89,12 +89,59 @@
          itemCounter.innerHTML = totalItems;
      }
  }
+
+ function loadCart() {
+     var main = document.getElementById('CartProducts');
+
+     // elements needing to be added
+     for (var i = 0; i < items.length; i++) {
+
+
+
+
+         var ele = document.createElement('li');
+         var pic = document.createElement('img');
+         var price = document.createElement('h1');
+         var desc = document.createElement('h2');
+         var deleteItem = document.createElement('button');
+         var amount = document.createElement('h2');
+         var subtotal = document.createElement('h3');
+
+
+
+         // Push elements into html
+         main.appendChild(ele);
+         ele.appendChild(pic);
+         ele.appendChild(price);
+         ele.appendChild(desc);
+         ele.appendChild(deleteItem);
+         ele.appendChild(amount);
+         ele.appendChild(subtotal);
+
+         //edit pusher elements info from array
+
+         pic.src = cartItems[i][0];
+         price.innerHTML = '$' + cartItems[i][1];
+         desc.innerHTML = cartItems[i][2];
+
+         deleteItem.innerHTML = 'Delete Item';
+         deleteItem.dataset.cartIndex = i;
+         deleteItem.addEventListener('click', deleteMe, false);
+
+         amount.innerHTML = cartItems[i][1];
+         subtotal.innerHTML = cartItems[i][1] * cartItems[i][1];
+     }
+
+    function deleteMe (){
+        alert('gone');
+    }
+ }
 </script>
 
 <body onload="run()">
     <nav>
+        <a href="CartIndex.html">Cart</a>
         <a href="HomeIndex.html">Exit</a>
-    
     </nav>
     <h1 >Cart Items:</h1>
     
@@ -104,4 +151,5 @@
 
     </ul>
 
+    
 </body>

@@ -89,6 +89,10 @@ script {
 
 }
 
+#cartProducts {
+    display: block;
+}
+
 /*   Iframe values */
 .Map {
     display: block;
